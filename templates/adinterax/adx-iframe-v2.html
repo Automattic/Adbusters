@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<SCRIPT>
+
+// (c) 2002-2004 adInterax, All Rights Reserved, http://adinterax.com
+//
+// !! DO NOT MODIFY THIS PAGE IN ANY WAY !!
+// 03-2013 :  Changed the file to work for DFP serving (user : rishikag)
+
+var adxid=Math.random(),k,v,l=location.href,l2,l3,i,p=new Array(),u,a=new Array('ad','nest','extra','adx_dfp')
+if((i=l.indexOf("?"))>0){
+l2=l.substr(i+1)+'&'
+while((i=l2.indexOf('&'))>0){
+l3=l2.substr(0,i)
+l2=l2.substr(i+1)
+if((i=l3.indexOf('='))>0){
+k=l3.substr(0,i)
+v=unescape(l3.substr(i+1))
+for(i=0;i<4;i++)if(k==a[i]){p[i]=v;break}
+if(i>2)eval("var "+k+"='"+v+"'")}}}
+u='http://'+p[0]+'/ad-iframe.js?';for(i=1;i<4;i++)if(p[i])u+=a[i]+'='+escape(p[i])+'&'
+</SCRIPT>
+</HEAD>
+<BODY STYLE="margin:0px">
+<SCRIPT>document.write('<SCR'+'IPT LANGUAGE="JavaScript" SRC="'+u+'"></SCR'+'IPT>')</SCRIPT>
+</BODY>
+</HTML>
+<!-- wikiui-01.dt.corp.gq1.yahoo.com Thu Mar 14 14:37:26 UTC 2013 -->
