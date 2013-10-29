@@ -30,8 +30,11 @@ along with this program.  If not, see http://www.gnu.org/licenses/.
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// TODO: some are strpos (e.g. DART), some are exact matches so need to account for those. Majority will be exact matches.
-
+/**
+ * If an appropriate request comes in, load an iframe ad buster file.
+ *
+ * @since Adbusters (1.0)
+ */
 function wpcom_vip_maybe_load_ad_busters() {
 
 	$ad_busters = array(
