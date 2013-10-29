@@ -33,6 +33,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * If an appropriate request comes in, load an iframe ad buster file.
  *
+ * Note: the following networks/scripts are insecure and will not be added to the plugin:
+ * > EyeReturn (/eyereturn/eyereturn.html)
+ * > Unicast (/unicast/unicastIFD.html)
+ * > Yahoo - AdInterax (/adinterax/adx-iframe-v2.html)
+ *
  * @since Adbusters (1.0)
  */
 function wpcom_vip_maybe_load_ad_busters() {
@@ -41,10 +46,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'/atlas/atlas_rm.htm',            // Atlas
 		'/doubleclick/DARTIframe.html',   // Google - DoubleClick
 		'/eyeblaster/addineyeV2.html',    // MediaMind - EyeBlaster
-		'/eyereturn/eyereturn.html',      // ? - EyeReturn
 		'/pointroll/PointRollAds.htm',    // PointRoll
-		'/unicast/unicastIFD.html',       // Unicast
-		'/adinterax/adx-iframe-v2.html',  // Yahoo - AdInterax
 	);
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load

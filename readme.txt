@@ -20,16 +20,12 @@ If the answer is yes, don't wait another minute! ADBUSTERS! Download this plugin
 * First release.
 
 == Frequently Asked Questions ==
-
 = What ad network iframes are supported? =
 
 * /atlas/atlas_rm.htm
 * /doubleclick/DARTIframe.html
 * /eyeblaster/addineyeV2.html
-* /eyereturn/eyereturn.html
 * /pointroll/PointRollAds.htm
-* /unicast/unicastIFD.html
-* /adinterax/adx-iframe-v2.html
 
 == Installation ==
 1. Install via WordPress Plugins administration page.
