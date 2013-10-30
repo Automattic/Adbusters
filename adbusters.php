@@ -37,6 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * > EyeReturn (/eyereturn/eyereturn.html)
  * > Unicast (/unicast/unicastIFD.html)
  * > Yahoo - AdInterax (/adinterax/adx-iframe-v2.html)
+ * > AdCentric (/adcentric/ifr_b.html)
  *
  * @since Adbusters (1.0)
  */
