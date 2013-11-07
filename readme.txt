@@ -25,7 +25,10 @@ If the answer is yes, don't wait another minute! ADBUSTERS! Download this plugin
 * /atlas/atlas_rm.htm
 * /doubleclick/DARTIframe.html
 * /eyeblaster/addineyeV2.html
+* /mediamind/MMbuster.html
+* /pictela/Pictela_iframeproxy.html
 * /pointroll/PointRollAds.htm
+* /undertone/UT_iframe_buster.html
 
 == Installation ==
 1. Install via WordPress Plugins administration page.

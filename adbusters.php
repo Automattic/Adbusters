@@ -38,16 +38,20 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * > Unicast (/unicast/unicastIFD.html)
  * > Yahoo - AdInterax (/adinterax/adx-iframe-v2.html)
  * > AdCentric (/adcentric/ifr_b.html)
+ * > Jivox (/jivox/jivoxIBuster.html)
  *
  * @since Adbusters (1.0)
  */
 function wpcom_vip_maybe_load_ad_busters() {
 
 	$ad_busters = array(
-		'/atlas/atlas_rm.htm',            // Atlas
-		'/doubleclick/DARTIframe.html',   // Google - DoubleClick
-		'/eyeblaster/addineyeV2.html',    // MediaMind - EyeBlaster
-		'/pointroll/PointRollAds.htm',    // PointRoll
+		'/atlas/atlas_rm.htm',                // Atlas
+		'/doubleclick/DARTIframe.html',       // Google - DoubleClick
+		'/eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
+		'/mediamind/MMbuster.html',           // MediaMind - addineye (?)
+		'/pictela/Pictela_iframeproxy.html',  // AOL - Pictela
+		'/pointroll/PointRollAds.htm',        // PointRoll
+		'/undertone/UT_iframe_buster.html',   // Intercept Interactive - Undertone
 	);
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
