@@ -48,9 +48,11 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'/atlas/atlas_rm.htm',                // Atlas
 		'/doubleclick/DARTIframe.html',       // Google - DoubleClick
 		'/eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
+		'/flite/fif.html',                    // Flite
 		'/mediamind/MMbuster.html',           // MediaMind - addineye (?)
 		'/pictela/Pictela_iframeproxy.html',  // AOL - Pictela
 		'/pointroll/PointRollAds.htm',        // PointRoll
+		'/smartadserver/iframeout.html',      // SmartAdserver
 		'/undertone/UT_iframe_buster.html',   // Intercept Interactive - Undertone
 	);
 
