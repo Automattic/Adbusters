@@ -37,7 +37,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * > EyeReturn (/eyereturn/eyereturn.html)
  * > Unicast (/unicast/unicastIFD.html)
  * > Yahoo - AdInterax (/adinterax/adx-iframe-v2.html)
- * > AdCentric (/adcentric/ifr_b.html)
  * > Jivox (/jivox/jivoxIBuster.html)
  *
  * @since Adbusters (1.0)
@@ -45,15 +44,23 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function wpcom_vip_maybe_load_ad_busters() {
 
 	$ad_busters = array(
+		'/adcentric/ifr_b.html',              // AdCentric
 		'/atlas/atlas_rm.htm',                // Atlas
 		'/doubleclick/DARTIframe.html',       // Google - DoubleClick
 		'/eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
 		'/flite/fif.html',                    // Flite
+		'/gumgum/iframe_buster.html',         // gumgum
+		'/interpolls/pub_interpolls.html',    // Interpolls
+		'/klipmart/km_ss.html',               // Google - DoubleClick - Klipmart
 		'/mediamind/MMbuster.html',           // MediaMind - addineye (?)
+		'/oggifinogi/oggiPlayerLoader.htm',   // Collective - OggiFinogi
 		'/pictela/Pictela_iframeproxy.html',  // AOL - Pictela
 		'/pointroll/PointRollAds.htm',        // PointRoll
+		'/saymedia/iframebuster.html',        // Say Media
 		'/smartadserver/iframeout.html',      // SmartAdserver
+		'/undertone/iframe-buster.html',      // Intercept Interactive - Undertone
 		'/undertone/UT_iframe_buster.html',   // Intercept Interactive - Undertone
+		'/viewpoint/vwpt.html',               // Enliven Marketing Technologies Corporation - Viewpoint
 	);
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
