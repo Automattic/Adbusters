@@ -61,6 +61,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'/undertone/iframe-buster.html',      // Intercept Interactive - Undertone
 		'/undertone/UT_iframe_buster.html',   // Intercept Interactive - Undertone
 		'/viewpoint/vwpt.html',               // Enliven Marketing Technologies Corporation - Viewpoint
+		'/_uac/adpage.html',                  // AOL - atwola.com
 	);
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
