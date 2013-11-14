@@ -44,42 +44,42 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function wpcom_vip_maybe_load_ad_busters() {
 
 	$ad_busters = array(
-		'/adcentric/ifr_b.html',              // AdCentric
-		'/atlas/atlas_rm.htm',                // Atlas
-		'/doubleclick/DARTIframe.html',       // Google - DoubleClick
-		'/eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
-		'/flite/fif.html',                    // Flite
-		'/gumgum/iframe_buster.html',         // gumgum
-		'/interpolls/pub_interpolls.html',    // Interpolls
-		'/klipmart/km_ss.html',               // Google - DoubleClick - Klipmart
-		'/mediamind/MMbuster.html',           // MediaMind - addineye (?)
-		'/oggifinogi/oggiPlayerLoader.htm',   // Collective - OggiFinogi
-		'/pictela/Pictela_iframeproxy.html',  // AOL - Pictela
-		'/pointroll/PointRollAds.htm',        // PointRoll
-		'/saymedia/iframebuster.html',        // Say Media
-		'/smartadserver/iframeout.html',      // SmartAdserver
-		'/undertone/iframe-buster.html',      // Intercept Interactive - Undertone
-		'/undertone/UT_iframe_buster.html',   // Intercept Interactive - Undertone
-		'/viewpoint/vwpt.html',               // Enliven Marketing Technologies Corporation - Viewpoint
-		'/_uac/adpage.html',                  // AOL - atwola.com
+		'adcentric/ifr_b.html',              // AdCentric
+		'atlas/atlas_rm.htm',                // Atlas
+		'doubleclick/DARTIframe.html',       // Google - DoubleClick
+		'eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
+		'flite/fif.html',                    // Flite
+		'gumgum/iframe_buster.html',         // gumgum
+		'interpolls/pub_interpolls.html',    // Interpolls
+		'klipmart/km_ss.html',               // Google - DoubleClick - Klipmart
+		'mediamind/MMbuster.html',           // MediaMind - addineye (?)
+		'oggifinogi/oggiPlayerLoader.htm',   // Collective - OggiFinogi
+		'pictela/Pictela_iframeproxy.html',  // AOL - Pictela
+		'pointroll/PointRollAds.htm',        // PointRoll
+		'saymedia/iframebuster.html',        // Say Media
+		'smartadserver/iframeout.html',      // SmartAdserver
+		'undertone/iframe-buster.html',      // Intercept Interactive - Undertone
+		'undertone/UT_iframe_buster.html',   // Intercept Interactive - Undertone
+		'viewpoint/vwpt.html',               // Enliven Marketing Technologies Corporation - Viewpoint
+		'_uac/adpage.html',                  // AOL - atwola.com
 	);
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
 	$block_ads  = apply_filters( 'wpcom_vip_maybe_load_ad_busters', array() );
 	$ad_busters = array_diff( $ad_busters, $block_ads );
 
+	$request = ltrim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' );
+
 	// Do we have a request for a supported network?
-	$request = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
-	$index   = array_search( $request, $ad_busters );
+	$index  = array_search( $request, $ad_busters );
 	if ( false === $index )
 		return;
 
+	// Spit out the template
 	$file = plugin_dir_path( __FILE__ ) . 'templates/' . $ad_busters[$index];
-
 	if ( ! file_exists( $file ) )
 		return;
 
-	// Spit out the template
 	header( 'Content-type: text/html' );
 	readfile( $file );
 
