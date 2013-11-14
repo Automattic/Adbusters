@@ -76,6 +76,9 @@ function wpcom_vip_maybe_load_ad_busters() {
 
 	$file = plugin_dir_path( __FILE__ ) . 'templates/' . $ad_busters[$index];
 
+	if ( ! file_exists( $file ) )
+		return;
+
 	// Spit out the template
 	header( 'Content-type: text/html' );
 	readfile( $file );
