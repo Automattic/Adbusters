@@ -86,3 +86,30 @@ function wpcom_vip_maybe_load_ad_busters() {
 	exit;
 }
 add_action( 'init', 'wpcom_vip_maybe_load_ad_busters', -1 );
+
+/**
+ * Prepends a leading slash.
+ *
+ * Will remove leading slash if it exists already before adding a leading slash. This prevents double slashing a string or path.
+ * The primary use of this is for paths and thus should be used for paths. It is not restricted to paths and offers no specific path support.
+ *
+ * @access private
+ * @param string $string What to add the leading slash to.
+ * @return string String with leading slash added.
+ */
+function _wpcom_vip_leadingslashit( $string ) {
+  return '/' . _wpcom_vip_unleadingslashit( $string );
+}
+
+/**
+ * Removes leading slash if it exists.
+ *
+ * The primary use of this is for paths and thus should be used for paths. It is not restricted to paths and offers no specific path support.
+ *
+ * @access private
+ * @param string $string What to remove the leading slash from.
+ * @return string String without the leading slash.
+ */
+function _wpcom_vip_unleadingslashit( $string ) {
+  return ltrim( $string, '/' );
+}
