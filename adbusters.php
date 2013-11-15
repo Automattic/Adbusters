@@ -67,16 +67,29 @@ function wpcom_vip_maybe_load_ad_busters() {
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
 	$block_ads  = apply_filters( 'wpcom_vip_maybe_load_ad_busters', array() );
 	$ad_busters = array_diff( $ad_busters, $block_ads );
+	$ad_paths   = $ad_busters;
 
-	$request = ltrim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' );
+	// If your ads need to be served from example.com/some/subfolder/*, pass "some/subfolder" to this filter
+	$path = explode( '/', apply_filters( 'wpcom_vip_ad_busters_custom_path', '' ) );
+	$path = array_filter( array_map( 'sanitize_file_name', $path ) );
+	$path = implode( '/', $path );
+
+	// Make sure both the ends of the path have slashes
+	$path = _wpcom_vip_leadingslashit( $path );
+	$path = trailingslashit( $path );
+
+	$ad_busters = array_map( function( $ad_file ) use ( $path ) {
+		return "{$path}{$ad_file}";
+	}, $ad_busters );
 
 	// Do we have a request for a supported network?
-	$index  = array_search( $request, $ad_busters );
+	$request = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
+	$index   = array_search( $request, $ad_busters );
 	if ( false === $index )
 		return;
 
 	// Spit out the template
-	$file = plugin_dir_path( __FILE__ ) . 'templates/' . $ad_busters[$index];
+	$file = plugin_dir_path( __FILE__ ) . 'templates/' . $ad_paths[$index];
 	if ( ! file_exists( $file ) )
 		return;
 
