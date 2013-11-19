@@ -46,6 +46,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 	$ad_busters = array(
 		'adcentric/ifr_b.html',              // AdCentric
 		'atlas/atlas_rm.htm',                // Atlas
+		'checkm8/CM8IframeBuster.html',      // CheckM8
 		'doubleclick/DARTIframe.html',       // Google - DoubleClick
 		'eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
 		'flite/fif.html',                    // Flite
