@@ -43,6 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 function wpcom_vip_maybe_load_ad_busters() {
 
+	// supported ad busters
 	$ad_busters = array(
 		'adcentric/ifr_b.html',              // AdCentric
 		'atlas/atlas_rm.htm',                // Atlas
@@ -67,6 +68,14 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'_uac/adpage.html',                  // AOL - atwola.com
 	);
 
+	// unsupported ad busters
+	$forbidden_busters = array( 
+		'/eyereturn/eyereturn.html',		// EyeReturn
+		'/unicast/unicastIFD.html',			// Unicast
+		'/adinterax/adx-iframe-v2.html',	// Yahoo - AdInterax
+		'/jivox/jivoxIBuster.html',			// Jivox
+	);
+
 	// To only support a specific ad network, user this filter and return an array containing the values of $ad_busters to load
 	$whitelist_ads = (array) apply_filters( 'wpcom_vip_maybe_load_ad_busters_whitelist', $ad_busters );
 	$ad_busters = array_filter( $ad_busters, function( $ad_buster_path ) use ( $whitelist_ads ){
@@ -77,7 +86,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 	$block_ads  = apply_filters( 'wpcom_vip_maybe_load_ad_busters', array() );
 	$ad_busters = array_diff( $ad_busters, $block_ads );
 	$ad_paths   = $ad_busters;
-	
+
 	// do we have any supported networks?
 	if ( empty( $ad_paths ) )
 		return;
@@ -95,8 +104,15 @@ function wpcom_vip_maybe_load_ad_busters() {
 		return "{$path}{$ad_file}";
 	}, $ad_busters );
 
-	// Do we have a request for a supported network?
+	// What page is requested?
 	$request = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
+	
+	// Do we have a request for a forbidden network?
+	$forbidden = array_search( $request, $forbidden_busters );
+	if ( false !== $forbidden )
+		wp_die( "This url is not allowed.", 'Ad buster not supported', array( 'response' => 403 ) );
+	
+	// Do we have a request for a supported network?
 	$index   = array_search( $request, $ad_busters );
 	if ( false === $index )
 		return;
@@ -112,6 +128,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 	exit;
 }
 add_action( 'init', 'wpcom_vip_maybe_load_ad_busters', -1 );
+
 
 /**
  * Prepends a leading slash.
