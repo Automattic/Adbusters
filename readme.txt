@@ -15,6 +15,8 @@ Are you troubled by strange iframe ad files in the middle of the night? Do you e
 
 If the answer is yes, don't wait another minute! ADBUSTERS! Download this plugin today and let us take care of your ad file serving needs.
 
+Caveat: while we have reviewed the included templates for obvious security issues (like XSS), we cannot guarantee the reliability of external scripts referenced by most of the adbusters. We highly recommend discussing with your ad network representative to discuss this if you have any concerns.
+
 == Changelog ==
 = 1.0 =
 * First release.
