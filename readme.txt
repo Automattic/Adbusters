@@ -23,6 +23,7 @@ If the answer is yes, don't wait another minute! ADBUSTERS! Download this plugin
 = What ad network iframes are supported? =
 
 * /atlas/atlas_rm.htm
+* /blogads/iframebuster-4.html
 * /doubleclick/DARTIframe.html
 * /eyeblaster/addineyeV2.html
 * /mediamind/MMbuster.html
