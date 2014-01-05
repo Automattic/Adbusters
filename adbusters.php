@@ -106,7 +106,10 @@ function wpcom_vip_maybe_load_ad_busters() {
 	if ( ! file_exists( $file ) )
 		return;
 
+	$expires =  60*60*24*1;
 	header( 'Content-type: text/html' );
+	header( 'Cache-Control: max-age=' . $expires  );
+	header( 'Expires: ' . gmdate( "D, d M Y H:i:s", time() + $expires ) . ' GMT' );
 	readfile( $file );
 
 	exit;
