@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	Used by Rubicon ad serving to allow resizing of iframes
+	Include rubicon.js or its contents with your site's JS
+	so the rp_resize function is available in the global scope
+-->
+</head>
+<body onload='rp_pif_resize()'>
+<script language='JavaScript' type='text/javascript'>
+	var rp_pif_resize = function () {
+		var sz = getParam('sz');
+		var id = getParam('id');
+		parent.parent.rp_resize(id, sz);
+	}
+
+	var getParam = function (n) {
+		n = n.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]');
+		var rgxs = '[\\?&]' + n + '=([^&#]*)';
+		var rgx = new RegExp(rgxs);
+		var winloc = window.location;
+		var rs = rgx.exec(winloc.protocol + '//' + winloc.hostname + winloc.pathname);
+		if (rs == null)
+			return '';
+		else
+			return rs[1];
+	}
+</script>
+</body>
+</html>
