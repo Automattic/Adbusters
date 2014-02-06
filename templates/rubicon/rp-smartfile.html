@@ -9,9 +9,14 @@
 </head>
 <body onload='rp_pif_resize()'>
 <script language='JavaScript' type='text/javascript'>
+
 	var rp_pif_resize = function () {
-		var sz = getParam('sz');
+		var sz = parseInt(getParam('sz'), 10);
 		var id = getParam('id');
+		var pattern = new RegExp(/^[a-zA-Z][\w:.-]*$/);
+		if ( pattern.test(id) !== true ) {
+			return;
+		}
 		parent.parent.rp_resize(id, sz);
 	}
 
@@ -26,6 +31,7 @@
 		else
 			return rs[1];
 	}
+
 </script>
 </body>
 </html>
