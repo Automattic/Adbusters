@@ -60,6 +60,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'oggifinogi/oggiPlayerLoader.htm',   // Collective - OggiFinogi
 		'pictela/Pictela_iframeproxy.html',  // AOL - Pictela
 		'pointroll/PointRollAds.htm',        // PointRoll
+		'rubicon/rp-smartfile.html',		 // Rubicon
 		'saymedia/iframebuster.html',        // Say Media
 		'smartadserver/iframeout.html',      // SmartAdserver
 		'undertone/iframe-buster.html',      // Intercept Interactive - Undertone
