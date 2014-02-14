@@ -24,7 +24,7 @@
 		n = n.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]');
 		var rgxs = '[\\?&]' + n + '=([^&#]*)';
 		var rgx = new RegExp(rgxs);
-		var rs = rgx.exec(windows.location.search);
+		var rs = rgx.exec(window.location.search);
 		if (rs == null)
 			return '';
 		else
