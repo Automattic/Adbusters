@@ -13,7 +13,7 @@
 	var rp_pif_resize = function () {
 		var sz = parseInt(getParam('sz'), 10);
 		var id = getParam('id');
-		var pattern = new RegExp(/^[a-zA-Z][\w:.-]*$/);
+		var pattern = new RegExp(/^[a-zA-Z][\/\w:\.\-_]*$/);
 		if ( pattern.test(id) !== true ) {
 			return;
 		}
