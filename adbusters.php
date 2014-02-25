@@ -48,6 +48,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'atlas/atlas_rm.htm',                // Atlas
 		'blogads/iframebuster-4.html',       // BlogAds
 		'checkm8/CM8IframeBuster.html',      // CheckM8
+		'comscore/cs-arIframe.htm',          // comScore
 		'doubleclick/DARTIframe.html',       // Google - DoubleClick
 		'doubleclick/fif.html',              // Flite
 		'eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
