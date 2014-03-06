@@ -55,6 +55,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'flite/fif.html',                    // Flite
 		'gumgum/iframe_buster.html',         // gumgum
 		'interpolls/pub_interpolls.html',    // Interpolls
+		'jivox/jivoxIBuster.html',           // Jivox
 		'jpd/jpxdm.html',                    // Jetpack Digital
 		'klipmart/km_ss.html',               // Google - DoubleClick - Klipmart
 		'mediamind/MMbuster.html',           // MediaMind - addineye (?)
