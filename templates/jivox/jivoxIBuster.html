@@ -32,7 +32,7 @@
             var buster_js = window.top.document.createElement("script"); 
             buster_js.setAttribute("type", 'text/javascript'); 
             buster_js.setAttribute("src", iBusterResourceURL[0] + '.jivox.com/player/'+ getValueWithDefault("iBusterVersion", parameters, "") +'/iBuster.js' ); 
-            window.top.document.getElementsByTagName('head')[0].appendChild(buster_js);
+            document.getElementsByTagName('head')[0].appendChild(buster_js);
         }
         catch(e) {
         }
