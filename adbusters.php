@@ -67,6 +67,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'undertone/iframe-buster.html',      // Intercept Interactive - Undertone
 		'undertone/UT_iframe_buster.html',   // Intercept Interactive - Undertone
 		'viewpoint/vwpt.html',               // Enliven Marketing Technologies Corporation - Viewpoint
+		'xaxis/InfinityIframe.html',         // Xaxis
 		'_uac/adpage.html',                  // AOL - atwola.com
 	);
 
