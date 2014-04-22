@@ -35,13 +35,14 @@ function Querystring_get(strKey,strDefault)
 var parentpage = eval("parent.parent");
 
 function loadftscript(){
+	
+	if(!/^https?:\/\/(cdn|secure)\.flashtalking\.com\//.test(qs.ifsrc)) {
+		return;
+	}
 
 	var ftscript02 = document.createElement("script");
 	ftscript02.setAttribute("src",qs.get("ifsrc",""));
 	ftscript02.id = "ftscript";
-	if(!/^https?:\/\/(cdn|secure)\.flashtalking\.com\//.test(qs.ifsrc)) {
-		return;
-	}
 	document.body.appendChild(ftscript02);
 		
 }
