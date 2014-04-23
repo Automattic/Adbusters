@@ -1,13 +1,22 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<SCRIPT LANGUAGE="JavaScript">
-var qs = new Querystring()
-function Querystring()
-{
-	var querystring=location.search.substring(1,location.search.length);
-	querystring = decodeURIComponent(querystring);
-	var args = querystring.split('&');
+</head>
+<body>
+<script>
+var qs = {};
+function init(){
+	function loadScript(url){
+		if(!/^https?:\/\/(cdn|secure)\.flashtalking\.com\//.test(qs.get("ifsrc"))){
+			return;
+		}
+		var adScript = document.createElement("script");
+		adScript.src=url;
+		document.body.appendChild(adScript);
+	}
+	var querystring=decodeURIComponent(location.search.substring(1,location.search.length)),
+	args = querystring.split('&'),
+	qso = {},
+	pair,temp0,temp1;
 	for (var i=0;i<args.length;i++)
 	{
 		var pair = args[i].split('=');
@@ -21,50 +30,24 @@ function Querystring()
 		temp0 = temp.join(' ');
 		temp = unescape(pair[1]).split('+');
 		temp1 = temp.join(' ');
-		this[temp0]=temp1;
+		qso[temp0]=temp1;
 	}
-	this.get=Querystring_get;
+	qs.get=function(key,def){
+		return ((typeof qso[key]=="undefined")?def:qso[key]);
+	};
+	loadScript(qs.get("ifsrc",""));
 }
-function Querystring_get(strKey,strDefault)
-{
-	var value=this[strKey];
-	if (value==null){value=strDefault;}
-	return value;
-}
-
-var parentpage = eval("parent.parent");
-
-function loadftscript(){
-	
-	if(!/^https?:\/\/(cdn|secure)\.flashtalking\.com\//.test(qs.ifsrc)) {
-		return;
-	}
-
-	var ftscript02 = document.createElement("script");
-	ftscript02.setAttribute("src",qs.get("ifsrc",""));
-	ftscript02.id = "ftscript";
-	document.body.appendChild(ftscript02);
-		
-}
-
-function loadpage(){
-	if (document.all){
-		if (parentpage.document.readyState == 'complete'){
-			loadftscript();
-		} else {
-			setTimeout("loadpage()",150);
+if(window!=top){
+	try{
+		if(document.domain==parent.document.domain){
+			init();
 		}
-	} else {
-		loadftscript();
+	}catch(e){
+		if(document.domain==parent.parent.document.domain){
+			init();
+		}
 	}
 }
-
-
-</SCRIPT>
-
-
-</head>
-<body onload="loadpage()">
-
+</script>
 </body>
 </html>
