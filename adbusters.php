@@ -51,6 +51,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'doubleclick/DARTIframe.html',       // Google - DoubleClick
 		'doubleclick/fif.html',              // Flite
 		'eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
+		'eyewonder/interim.html',            // EyeWonder
 		'flite/fif.html',                    // Flite
 		'gumgum/iframe_buster.html',         // gumgum
 		'interpolls/pub_interpolls.html',    // Interpolls
@@ -58,6 +59,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'jpd/jpxdm.html',                    // Jetpack Digital
 		'klipmart/km_ss.html',               // Google - DoubleClick - Klipmart
 		'mediamind/MMbuster.html',           // MediaMind - addineye (?)
+		'mixpo/framebust.html',              // mixpo
 		'oggifinogi/oggiPlayerLoader.htm',   // Collective - OggiFinogi
 		'pictela/Pictela_iframeproxy.html',  // AOL - Pictela
 		'pointroll/PointRollAds.htm',        // PointRoll
