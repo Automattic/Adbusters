@@ -12,7 +12,7 @@ The following are common XSS vulnerabilities found in iFrame busters.
 1. Unescaped URL parameter values
 2. Parameters that accept any domain
 
-= Unescaped URL parameter values =
+## Unescaped URL parameter values
 
 Special characters should be removed or converted into their equivalent HTML/hex entity. The characters in the following table can be used to write malicious code on the page.
 
