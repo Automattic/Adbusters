@@ -6,7 +6,7 @@
 var qs = {};
 function init(){
 	function loadScript(url){
-		if(!/^https?:\/\/(cdn|secure)\.flashtalking\.com\//.test(qs.get("ifsrc"))){
+		if(!/^https?:\/\/(cdn|secure)\.flashtalking\.com\//.test(url)){
 			return;
 		}
 		var adScript = document.createElement("script");
