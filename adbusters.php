@@ -59,6 +59,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'jpd/jpxdm.html',                    // Jetpack Digital
 		'klipmart/km_ss.html',               // Google - DoubleClick - Klipmart
 		'mediamind/MMbuster.html',           // MediaMind - addineye (?)
+		'mixpo/framebust.html',              // Mixpo
 		'oggifinogi/oggiPlayerLoader.htm',   // Collective - OggiFinogi
 		'pictela/Pictela_iframeproxy.html',  // AOL - Pictela
 		'pointroll/PointRollAds.htm',        // PointRoll
