@@ -70,7 +70,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'viewpoint/vwpt.html',               // Enliven Marketing Technologies Corporation - Viewpoint
 		'xaxis/InfinityIframe.html',         // Xaxis
 		'_uac/adpage.html',                  // AOL - atwola.com
-        'adcom/aceFIF.html',                 // Advertising.com (ad.com)
+		'adcom/aceFIF.html',                 // Advertising.com (ad.com)
 	);
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
