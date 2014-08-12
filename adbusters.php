@@ -51,6 +51,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'doubleclick/DARTIframe.html',       // Google - DoubleClick
 		'doubleclick/fif.html',              // Flite
 		'eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
+		'eyewonder/interim.html',            // EyeWonder
 		'flashtalking/ftlocal.html',         // Flashtalking
 		'flite/fif.html',                    // Flite
 		'gumgum/iframe_buster.html',         // gumgum
