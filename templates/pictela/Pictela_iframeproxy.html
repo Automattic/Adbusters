@@ -6,10 +6,13 @@
                              'pictela.net'];
       try {
         var adtechIframeHashArray = self.document.location.hash.substring(1).split('|ifv|');
-        var domain = adtechIframeHashArray[0].match(/https?:\/\/([^:^\/]*)/i)[1];
+        var domain = adtechIframeHashArray[0].match(/^https?:\/\/([^:\/]*)/i)[1];
         for (var d in allowed_domains) {
           if (allowed_domains[d] == domain) {
-            document.write('<scr' + 'ipt type="text/javascript" src="' + adtechIframeHashArray[0] + '"></scr' + 'ipt>');
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = adtechIframeHashArray[0];
+            document.body.appendChild(s);
             break;
           }
         }
