@@ -63,7 +63,7 @@
 				url += x + '=' + params[x] + '&';
 			}
 			
-			if (/^http:\/\/(localhost|ar|staging-ar).(survey-poll|voicefive).com/i.test(url)) {
+			if (/^http:\/\/(localhost|ar|staging-ar)\.(survey-poll|voicefive)\.com\//i.test(url)) {
 				if (! (/\@/.test(url)) ) {
 					try {
 						var script = top.document.createElement('script');
