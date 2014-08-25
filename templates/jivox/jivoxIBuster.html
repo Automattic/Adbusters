@@ -29,9 +29,14 @@
             iBusterResourceURL = iBusterResourceURL.split(".");
                         var filePath = getValueWithDefault("filePath", parameters, "");
 
+            var scheme = ( iBusterResourceURL[0].match( /^https:\/\//gi ) ) ? 'https://' : 'http://';
+
+            // Sanitize subdomain by stripping non alphanumeric characters
+            var subdomain = iBusterResourceURL[0].replace( /^https?:\/\//gi, '').replace(/[\W]/gi, '');
+
             var buster_js = window.top.document.createElement("script"); 
             buster_js.setAttribute("type", 'text/javascript'); 
-            buster_js.setAttribute("src", iBusterResourceURL[0] + '.jivox.com/player/'+ getValueWithDefault("iBusterVersion", parameters, "") +'/iBuster.js' ); 
+            buster_js.setAttribute("src", scheme + subdomain + '.jivox.com/player/'+ getValueWithDefault("iBusterVersion", parameters, "") +'/iBuster.js' ); 
             document.getElementsByTagName('head')[0].appendChild(buster_js);
         }
         catch(e) {
