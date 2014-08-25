@@ -24,6 +24,11 @@ function qs(key){
 }
 var _c = qs('c');
 var r_number = Math.random();
-document.writeln('<SCR'+'IPT language=\'JavaScript\' S'+'RC="http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number+'"></SCR'+'IPT>');
+
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.src = 'http://media.adcentriconline.com/adcentric/tag/'+_c+'?ADCadcifr=1&number='+r_number;
+document.body.appendChild(s);
+
 </script>
 </body></html>
