@@ -58,7 +58,6 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'interpolls/pub_interpolls.html',    // Interpolls
 		'jivox/jivoxIBuster.html',           // Jivox
 		'jpd/jpxdm.html',                    // Jetpack Digital
-		'klipmart/km_ss.html',               // Google - DoubleClick - Klipmart
 		'mediamind/MMbuster.html',           // MediaMind - addineye (?)
 		'mixpo/framebust.html',              // Mixpo
 		'oggifinogi/oggiPlayerLoader.htm',   // Collective - OggiFinogi
