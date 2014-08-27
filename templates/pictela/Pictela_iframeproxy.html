@@ -6,7 +6,12 @@
                              'pictela.net'];
       try {
         var adtechIframeHashArray = self.document.location.hash.substring(1).split('|ifv|');
-        var domain = adtechIframeHashArray[0].match(/^https?:\/\/([^:\/]*)/i)[1];
+
+        // Parse the url using the browser's engine
+        var a = document.createElement( 'a' );
+        a.href = adtechIframeHashArray[0];
+        var domain = a.hostname;
+
         for (var d in allowed_domains) {
           if (allowed_domains[d] == domain) {
             var s = document.createElement('script');
