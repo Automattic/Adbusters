@@ -30,18 +30,8 @@ along with this program.  If not, see http://www.gnu.org/licenses/.
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-/**
- * If an appropriate request comes in, load an iframe ad buster file.
- *
- * Note: the following networks/scripts are insecure and will not be added to the plugin:
- * > EyeReturn (/eyereturn/eyereturn.html)
- * > Unicast (/unicast/unicastIFD.html)
- *
- * @since Adbusters (1.0)
- */
-function wpcom_vip_maybe_load_ad_busters() {
-
-	$ad_busters = array(
+function wpcom_vip_get_ad_busters_array() {
+	return array(
 		'adcentric/ifr_b.html',              // AdCentric
 		'adinterax/adx-iframe-v2.html',      // AdInterax
 		'atlas/atlas_rm.htm',                // Atlas
@@ -72,6 +62,20 @@ function wpcom_vip_maybe_load_ad_busters() {
 		'_uac/adpage.html',                  // AOL - atwola.com
 		'adcom/aceFIF.html',                 // Advertising.com (ad.com)
 	);
+}
+
+/**
+ * If an appropriate request comes in, load an iframe ad buster file.
+ *
+ * Note: the following networks/scripts are insecure and will not be added to the plugin:
+ * > EyeReturn (/eyereturn/eyereturn.html)
+ * > Unicast (/unicast/unicastIFD.html)
+ *
+ * @since Adbusters (1.0)
+ */
+function wpcom_vip_maybe_load_ad_busters() {
+
+	$ad_busters = wpcom_vip_get_ad_busters_array();
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
 	$block_ads  = apply_filters( 'wpcom_vip_maybe_load_ad_busters', array() );
