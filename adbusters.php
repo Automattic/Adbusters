@@ -32,6 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 function wpcom_vip_get_ad_busters_array() {
 	return array(
+		'adcade/adcadebuster.html',          // Adcade
 		'adcentric/ifr_b.html',              // AdCentric
 		'adinterax/adx-iframe-v2.html',      // AdInterax
 		'atlas/atlas_rm.htm',                // Atlas
