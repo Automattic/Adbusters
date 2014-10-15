@@ -43,6 +43,7 @@ function wpcom_vip_get_ad_busters_array() {
 		'doubleclick/fif.html',              // Flite
 		'eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
 		'eyewonder/interim.html',            // EyeWonder
+		'f3-iframeout/f3-iframeout.html',    // F Sharp 
 		'flashtalking/ftlocal.html',         // Flashtalking
 		'flite/fif.html',                    // Flite
 		'gumgum/iframe_buster.html',         // gumgum
