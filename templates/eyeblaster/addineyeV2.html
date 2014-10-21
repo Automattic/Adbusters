@@ -2,7 +2,13 @@
 <HEAD>
 </HEAD>
 <BODY style=margin:0;padding:0>
-<SCRIPT src="http://ds.eyeblaster.com/BurstingScript/addineye.js">
+<script>
+	var strProtocol = ( "https:" == document.location.protocol ? "https://" : "http://" );
+	var strAddInEyeSrc = "ds.serving-sys.com/BurstingScript/addineye.js";
+	if(strProtocol == "https://")
+		strAddInEyeSrc = "secure-"+ strAddInEyeSrc;
+	strAddInEyeSrc = strProtocol + strAddInEyeSrc;
+	document.write("<scr"+"ipt src="+strAddInEyeSrc+"></scr"+"ipt>");
 </script>
 </BODY>
 </HTML>
