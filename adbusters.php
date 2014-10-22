@@ -79,10 +79,20 @@ function wpcom_vip_maybe_load_ad_busters() {
 
 	$ad_busters = wpcom_vip_get_ad_busters_array();
 
+	// To only support a specific ad network, user this filter and return an array containing the values of $ad_busters to load
+	$whitelist_ads = (array) apply_filters( 'wpcom_vip_maybe_load_ad_busters_whitelist', $ad_busters );
+	$ad_busters = array_filter( $ad_busters, function( $ad_buster_path ) use ( $whitelist_ads ){
+		return in_array( $ad_buster_path, $whitelist_ads ); 
+	} );
+	
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
 	$block_ads  = apply_filters( 'wpcom_vip_maybe_load_ad_busters', array() );
 	$ad_busters = array_diff( $ad_busters, $block_ads );
 	$ad_paths   = $ad_busters;
+	
+	// do we have any supported networks?
+	if ( empty( $ad_paths ) )
+		return;
 
 	// If your ads need to be served from example.com/some/subfolder/*, pass "some/subfolder" to this filter
 	$path = explode( '/', apply_filters( 'wpcom_vip_ad_busters_custom_path', '' ) );
@@ -108,7 +118,10 @@ function wpcom_vip_maybe_load_ad_busters() {
 	if ( ! file_exists( $file ) )
 		return;
 
+	$expires =  60*60*24*1;
 	header( 'Content-type: text/html' );
+	header( 'Cache-Control: max-age=' . $expires  );
+	header( 'Expires: ' . gmdate( "D, d M Y H:i:s", time() + $expires ) . ' GMT' );
 	readfile( $file );
 
 	exit;
