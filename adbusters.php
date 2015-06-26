@@ -41,6 +41,7 @@ function wpcom_vip_get_ad_busters_array() {
 		'comscore/cs-arIframe.htm',          // comScore
 		'doubleclick/DARTIframe.html',       // Google - DoubleClick
 		'doubleclick/fif.html',              // Flite
+		'doubleclick/TLIframe.html',         // TripleLift
 		'eyeblaster/addineyeV2.html',        // MediaMind - EyeBlaster
 		'eyewonder/interim.html',            // EyeWonder
 		'f3-iframeout/f3-iframeout.html',    // F Sharp
@@ -96,7 +97,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 
 	// If your ads need to be served from example.com/some/subfolder/*, pass "some/subfolder" to this filter
 	$path = explode( '/', apply_filters( 'wpcom_vip_ad_busters_custom_path', '' ) );
-	$path = array_filter( array_map( 'sanitize_file_name', $path ) );
+	$path = array_filter( array_map( 'sanitize_title', $path ) );
 	$path = implode( '/', $path );
 
 	// Make sure both the ends of the path have slashes
