@@ -82,9 +82,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 
 	// To only support a specific ad network, use this filter and return an array containing the values of $ad_busters to load
 	$whitelist_ads = (array) apply_filters( 'wpcom_vip_ad_busters_whitelist', $ad_busters );
-	$ad_busters = array_filter( $ad_busters, function( $ad_buster_path ) use ( $whitelist_ads ){
-		return in_array( $ad_buster_path, $whitelist_ads );
-	} );
+	$ad_busters = array_intersect( $ad_busters, $whitelist_ads );
 
 	// To ignore an ad network, use this filter and return an array containing the values of $ad_busters to not load
 	$block_ads  = apply_filters( 'wpcom_vip_maybe_load_ad_busters', array() );
