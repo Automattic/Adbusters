@@ -1,0 +1,35 @@
+{
+  "name": "automattic/adbusters",
+  "type": "wordpress-plugin",
+  "license": "GPLv3",
+  "description": "Iframe busters for popular ad networks.",
+  "homepage": "https://github.com/Automattic/Adbusters",
+  "authors": [
+    {
+      "name": "Paul Gibbs",
+      "homepage": "https://github.com/paulgibbs"
+    },
+    {
+      "name": "Mohammad Jangda",
+      "email": "batmoo@gmail.com",
+      "homepage": "https://github.com/mjangda"
+    },
+    {
+      "name": "Automattic",
+      "homepage": "https://github.com/Automattic"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "ads",
+    "adbuster",
+    "iframe"
+  ],
+  "support": {
+    "issues": "https://github.com/Automattic/Adbusters/issues"
+  },
+  "require": {
+    "php": ">=5.2.4",
+    "composer/installers": "~1.0"
+  }
+}
