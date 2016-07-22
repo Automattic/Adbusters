@@ -21,7 +21,7 @@
 var m3_u = (location.protocol == 'https:' ? 'https:':'http:') + '//am.contobox.com/frontend/ads/getcode.js?', qa = [];
 document.write ("<scr"+"ipt type='text/javascript' src='" + m3_u);
 for (var p in params) qa.push(p + "=" + params[p]);
-document.write (escape(qa.join('&')));
+document.write (encodeURIComponent(qa.join('&')));
 document.write ("'><\/scr"+"ipt>");
 //]]>--></script>
 

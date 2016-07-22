@@ -14,7 +14,7 @@ function ADM_getArgs(){
 var args=ADM_getArgs();
 for(var prop in args)
 	self[prop]=args[prop];
-document.writeln('<scr' + 'ipt type="text/javascr' + 'ipt" src="' + (escape(args.iq) || 'http://ia.nspmotion.com/delivery/') + '?p=' + escape(args.p) + '&sc=' + escape(args.sc) + '&r=' + (Math.round(Math.random() * 9999)) + (escape(args.test) ? '&test=true' : '') + '"></scr' + 'ipt>');
+document.writeln('<scr' + 'ipt type="text/javascr' + 'ipt" src="' + (encodeURIComponent(args.iq) || 'http://ia.nspmotion.com/delivery/') + '?p=' + encodeURIComponent(args.p) + '&sc=' + encodeURIComponent(args.sc) + '&r=' + (Math.round(Math.random() * 9999)) + (encodeURIComponent(args.test) ? '&test=true' : '') + '"></scr' + 'ipt>');
 </script>
 </body>
 </html>
