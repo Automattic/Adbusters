@@ -38,7 +38,6 @@ function wpcom_vip_get_ad_busters_array() {
 		'adcom/aceFIF.html',                  // Advertising.com (ad.com)
 		'adform/IFrameManager.html',          // Adform
 		'adinterax/adx-iframe-v2.html',       // AdInterax
-		'admotion/afa-iframe.htm',            // Admotion
 		'adrime/adrime_burst_2.0.0.htm',      // Adrime
 		'atlas/atlas_rm.htm',                 // Atlas
 		'blogads/iframebuster-4.html',        // BlogAds
