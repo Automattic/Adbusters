@@ -5,7 +5,7 @@ Plugin URI: https://github.com/Automattic/Adbusters
 Description: Iframe busters for popular ad networks.
 Version: 1.0
 Requires at least: 3.7
-Tested up to: 3.7.20
+Tested up to: 4.6.1
 License: GPLv3
 Author: Paul Gibbs, Mohammad Jangda, Automattic
 Author URI: http://automattic.com/
