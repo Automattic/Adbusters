@@ -3,7 +3,7 @@
 Plugin Name: Adbusters
 Plugin URI: https://github.com/Automattic/Adbusters
 Description: Iframe busters for popular ad networks.
-Version: 1.0
+Version: 1.0.1
 Requires at least: 3.7
 Tested up to: 4.6.1
 License: GPLv3
