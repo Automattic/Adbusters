@@ -2,7 +2,7 @@
 Contributors: DJPaul, batmoo, automattic
 Tags: ads, iframe busters, ad network
 Requires at least: 3.7
-Tested up to: 4.6.1
+Tested up to: 4.7
 Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
