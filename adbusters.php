@@ -43,6 +43,7 @@ function wpcom_vip_get_ad_busters_array() {
 		'checkm8/CM8IframeBuster.html',       // CheckM8
 		'comscore/cs-arIframe.htm',           // comScore
 		'contobox/iframebuster.html',         // Contobox
+		'doubleclick/adx_iframe.html',        // Google - DoubleClick
 		'doubleclick/DARTIframe.html',        // Google - DoubleClick
 		'doubleclick/fif.html',               // Flite
 		'doubleclick/TLIframe.html',          // TripleLift
