@@ -35,33 +35,23 @@ function wpcom_vip_get_ad_busters_array() {
 		'adcade/adcadebuster.html',           // Adcade
 		'adcentric/ifr_b.html',               // AdCentric
 		'adcom/aceFIF.html',                  // Advertising.com (ad.com)
-		'adform/IFrameManager.html',          // Adform
 		'adinterax/adx-iframe-v2.html',       // AdInterax
-		'adrime/adrime_burst_2.0.0.htm',      // Adrime
 		'atlas/atlas_rm.htm',                 // Atlas
 		'blogads/iframebuster-4.html',        // BlogAds
 		'checkm8/CM8IframeBuster.html',       // CheckM8
 		'comscore/cs-arIframe.htm',           // comScore
-		'contobox/iframebuster.html',         // Contobox
 		'doubleclick/adx_iframe.html',        // Google - DoubleClick
 		'doubleclick/DARTIframe.html',        // Google - DoubleClick
 		'doubleclick/fif.html',               // Flite
 		'doubleclick/TLIframe.html',          // TripleLift
-		'eyeblaster/addineyeV2.html',         // MediaMind - EyeBlaster
-		'eyewonder/interim.html',             // EyeWonder
 		'f3-iframeout/f3-iframeout.html',     // F Sharp
-		'flashtalking/ftlocal.html',          // Flashtalking
 		'flite/fif.html',                     // Flite
 		'gumgum/iframe_buster.html',          // gumgum
 		'interpolls/pub_interpolls.html',     // Interpolls
-		'jivox/jivoxIBuster.html',            // Jivox
 		'jpd/jpxdm.html',                     // Jetpack Digital
 		'knorex/knorex_psf.html',             // Knorex
-		'kpsule/iframebuster.html',           // Kpsule
 		'linkstorm/linkstorm_certified.html', // Linkstorm
 		'mediamind/MMbuster.html',            // MediaMind - addineye (?)
-		'mediaplex/mojofb_v9.html',           // Mediaplex
-		'mixpo/framebust.html',               // Mixpo
 		'oggifinogi/oggiPlayerLoader.htm',    // Collective - OggiFinogi
 		'pictela/Pictela_iframeproxy.html',   // AOL - Pictela
 		'pointroll/PointRollAds.htm',         // PointRoll
