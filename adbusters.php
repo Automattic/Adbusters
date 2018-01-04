@@ -58,8 +58,6 @@ function wpcom_vip_get_ad_busters_array() {
 		'rubicon/rp-smartfile.html',		  // Rubicon
 		'saymedia/iframebuster.html',         // Say Media
 		'smartadserver/iframeout.html',       // SmartAdserver
-		'undertone/iframe-buster.html',       // Intercept Interactive - Undertone
-		'undertone/UT_iframe_buster.html',    // Intercept Interactive - Undertone
 		'xaxis/InfinityIframe.html',          // Xaxis
 	);
 }
