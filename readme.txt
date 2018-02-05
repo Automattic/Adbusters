@@ -19,6 +19,10 @@ Caveat: while we have reviewed the included templates for obvious security issue
 
 == Changelog ==
 
+= 1.0.4 =
+
+* Clean up unused templates
+
 = 1.0.3 =
 
 * Remove unsupported Undertone iframe buster
