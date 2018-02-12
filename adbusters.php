@@ -47,7 +47,6 @@ function wpcom_vip_get_ad_busters_array() {
 		'f3-iframeout/f3-iframeout.html',     // F Sharp
 		'flite/fif.html',                     // Flite
 		'gumgum/iframe_buster.html',          // gumgum
-		'interpolls/pub_interpolls.html',     // Interpolls
 		'jpd/jpxdm.html',                     // Jetpack Digital
 		'knorex/knorex_psf.html',             // Knorex
 		'linkstorm/linkstorm_certified.html', // Linkstorm
