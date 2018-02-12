@@ -2,8 +2,8 @@
 Contributors: DJPaul, batmoo, automattic
 Tags: ads, iframe busters, ad network
 Requires at least: 3.7
-Tested up to: 4.8
-Stable tag: 1.0.3
+Tested up to: 4.9.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,6 +18,11 @@ If the answer is yes, don't wait another minute! ADBUSTERS! Download this plugin
 Caveat: while we have reviewed the included templates for obvious security issues (like XSS), we cannot guarantee the reliability of external scripts referenced by most of the adbusters. We highly recommend discussing with your ad network representative to discuss this if you have any concerns.
 
 == Changelog ==
+
+= 1.0.5 =
+
+* Remove unsupported Interpolls buster
+* Remove unsupported SmartAdServer buster
 
 = 1.0.4 =
 
