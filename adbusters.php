@@ -56,7 +56,6 @@ function wpcom_vip_get_ad_busters_array() {
 		'pointroll/PointRollAds.htm',         // PointRoll
 		'rubicon/rp-smartfile.html',		  // Rubicon
 		'saymedia/iframebuster.html',         // Say Media
-		'smartadserver/iframeout.html',       // SmartAdserver
 		'xaxis/InfinityIframe.html',          // Xaxis
 	);
 }
