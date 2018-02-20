@@ -32,7 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function wpcom_vip_get_ad_busters_array() {
 	return array(
 		'_uac/adpage.html',                   // AOL - atwola.com
-		'adcade/adcadebuster.html',           // Adcade
 		'adcentric/ifr_b.html',               // AdCentric
 		'adcom/aceFIF.html',                  // Advertising.com (ad.com)
 		'adinterax/adx-iframe-v2.html',       // AdInterax
