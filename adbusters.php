@@ -53,6 +53,7 @@ function wpcom_vip_get_ad_busters_array() {
 		'rubicon/rp-smartfile.html',		  // Rubicon
 		'saymedia/iframebuster.html',         // Say Media
 		'xaxis/InfinityIframe.html',          // Xaxis
+        'gemius/gfbuster.html',               // Gemius
 	);
 }
 
