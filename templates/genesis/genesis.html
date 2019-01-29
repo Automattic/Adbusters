@@ -1,0 +1,50 @@
+
+<html>
+<head>
+  <title>iframe buster</title>
+</head>
+<body>
+  <script type="text/javascript">
+  if (!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function (key) {
+      var arr = this;
+      for (var i = 0; i < arr.length; i++) {
+        if (key === arr[i]) {
+          return i;
+        }
+      }
+      return -1;
+    };
+  }
+  var pubConfig = ["http://cu.genesismedia.com/pub/bgr/config/cuconfig.js","http://cu.genesismedia.com/pub/hollywood_life/config/cuconfig.js","http://cu.genesismedia.com/pub/tvline/config/cuconfig.js","http://cu.genesismedia.com/pub/bgr_india/config/cuconfig.js","http://cu.genesismedia.com/pub/bollywood_life/config/cuconfig.js","http://cu.genesismedia.com/pub/brown_paperbag/config/cuconfig.js","http://cu.genesismedia.com/pub/cricket_country/config/cuconfig.js","http://cu.genesismedia.com/pub/deadline/config/cuconfig.js","http://cu.genesismedia.com/pub/the_health_site/config/cuconfig.js","http://cu.genesismedia.com/pub/variety/config/cuconfig.js","http://cu.genesismedia.com/pub/variety_latino/config/cuconfig.js","http://cu.genesismedia.com/pub/wwd/config/cuconfig.js","http://cu.genesismedia.com/pub/india_com/config/cuconfig.js"];
+    function getQueryParams() {
+      var params = document.location.search,
+          param,
+          result = {};
+      if (!params || params === " ") return {};
+      if (params.indexOf('?') === 0)
+        params = params.substring(1);
+      var paramsArray = params.split("&");
+      for (var i = 0; i < paramsArray.length; i++) {
+        param = paramsArray[i];
+        param = param.split("=");
+        if (param.length === 2)
+          result[param[0]] = decodeURIComponent(param[1]);
+      };
+      return result;
+    }
+    var parentDoc = window.parent.parent.document;
+    var parentWindow = window.parent.parent.window;
+    var script = parentDoc.createElement("script");
+    var params = getQueryParams();
+    var configSrc = params["config_file"];
+    if (pubConfig.indexOf(configSrc) > -1) {
+      script.src = params["config_file"];
+      script.type = "text/javascript";
+      // parentWindow.cunlock_config = cunlock_config;
+      var s = parentDoc.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(script, s);
+    }
+  </script>
+</body>
+</html>
