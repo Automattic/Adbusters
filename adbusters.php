@@ -96,7 +96,7 @@ function wpcom_vip_maybe_load_ad_busters() {
 	}, $ad_busters );
 
 	// Do we have a request for a supported network?
-	$request = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
+	$request = parse_url( isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '', PHP_URL_PATH );
 	$index   = array_search( $request, $ad_busters );
 	if ( false === $index )
 		return;
