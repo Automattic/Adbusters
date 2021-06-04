@@ -1,3 +1,5 @@
+[![Run PHPUnit and PHPCS](https://github.com/Automattic/Adbusters/actions/workflows/integrate.yml/badge.svg)](https://github.com/Automattic/Adbusters/actions/workflows/integrate.yml)
+
 # Adbusters for WordPress
 A WordPress plugin that loads a set of iframe busters for popular ad networks.
  
